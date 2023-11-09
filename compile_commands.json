@@ -5,7 +5,24 @@
       "-Wall",
       "-Wextra",
       "-Werror",
-      "-I./includes",
+      "-I./include",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/ft_printf_utils.o",
+      "src/ft_printf_utils.c"
+    ],
+    "directory": "/home/bonsthie/Documents/code/42/printf",
+    "file": "/home/bonsthie/Documents/code/42/printf/src/ft_printf_utils.c",
+    "output": "/home/bonsthie/Documents/code/42/printf/obj/ft_printf_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I./include",
       "-I./libft",
       "-c",
       "-o",
