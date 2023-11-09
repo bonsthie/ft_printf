@@ -1,44 +1,27 @@
-CC = clang
-CFLAGS = -Wall -Wextra -Werror 
-LIBDIR = ./libft
-INC_DIR = -I./libft
-LDFLAGS = -L$(LIBDIR) -lft
-SRC = $(wildcard *.c)
-OBJ = $(SRC:%.c=%.o)
-NAME = ft_printf.a
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+NAME = libftprintf.a
+SRCS = ft_printf.c  \
+       ft_putstr_fd.c \
+       ft_strlen.c \
+       ft_putchar_fd.c 
+OBJS = $(SRCS:.c=.o)
 
-GREEN = \033[0;32m
-NO_COLOR = \033[0m
+%.o: %.c 
+	$(CC) $(CFLAGS) -c -o $@ $<
 
-all: libft $(NAME)
+all: $(NAME)
 
-$(NAME): $(OBJ)
-	@echo -e "$(GREEN)-----------Linking $@------------$(NO_COLOR)"
-	ar rc $@ $^
-
-%.o: %.c
-	@echo "Compiling $<"
-	@$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@
-
-libft:
-	@$(MAKE) -C $(LIBDIR)
+$(NAME): $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
 clean:
-	@echo -e "$(GREEN)------------Cleaning objects------------$(NO_COLOR)"
-	@rm -f $(OBJ) 
+	rm -f $(OBJS)
 
-cleanlib :
-	@echo -e "$(GREEN)-----------Cleaning libft file----------$(NO_COLOR)"
-	@$(MAKE) -C $(LIBDIR) fclean
-
-fclean: clean cleanlib
-	@echo -e "$(GREEN)----------Cleaning executable----------$(NO_COLOR)"
-	@rm -f $(NAME)
-
+fclean: clean
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re libft cleanlib
-
-
+.PHONY: all clean fclean re
 
