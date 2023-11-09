@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I./includes",
+      "-I./libft",
+      "-c",
+      "-o",
+      "obj/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/bonsthie/Documents/code/42/printf",
+    "file": "/home/bonsthie/Documents/code/42/printf/src/main.c",
+    "output": "/home/bonsthie/Documents/code/42/printf/obj/main.o"
+  }
+]
