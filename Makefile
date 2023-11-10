@@ -2,6 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 SRCS = ft_printf.c  \
+	   print.c \
        ft_putstr_fd.c \
        ft_strlen.c \
        ft_putchar_fd.c 
