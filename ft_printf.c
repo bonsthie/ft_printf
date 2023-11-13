@@ -22,32 +22,33 @@ static int print_variable(va_list var, const char type)
 		ft_putchar_fd('%', 1);
 		count++;
 	}
-	else
-	return (count);
+    return (count);
 }
 
 int ft_printf(const char *format, ...)
 {
 	va_list args;
-	int     done;
+	int     count;
+    int     add_count;
 
 	va_start(args, format);
-	done = 0;
+	count = 0;
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
 			if (*format)
-				done += print_variable(args, *format);
+				add_count = print_variable(args, *format);
 		}
 		else
-		{
-			ft_putchar_fd(*format, 1);
-			done++;
-		}
-		format++;
+			add_count = write(1, format, 1);
+		++format;
+        if (add_count == -1)
+            count = -1;
+        if (count != -1)
+            count += add_count;
 	}
 	va_end(args);
-	return (done);
+	return (count);
 }
