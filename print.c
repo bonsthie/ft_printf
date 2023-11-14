@@ -71,3 +71,9 @@ int manage_char(va_list var, const char type)
 	return (ft_strlen(str));
 }
 
+int display_wrong_flag(char c)
+{
+    write(1, "%", 1);
+    write(1, &c, 1);
+    return (2);
+}

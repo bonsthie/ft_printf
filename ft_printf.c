@@ -16,38 +16,36 @@ static int print_variable(va_list var, const char type)
 	else if (type == 'X')
 		ft_putnbr_base(va_arg(var, unsigned int), "0123456789ABCDEF", 16, &count);
 	else if (type == 'p')
-			count += print_pointer((unsigned long) va_arg(var, void *));
+		count += print_pointer((unsigned long) va_arg(var, void *));
 	else if (type == '%')
-	{
-		ft_putchar_fd('%', 1);
-		count++;
-	}
-    return (count);
+		count = write(1, "%", 1);
+	else
+		count = display_wrong_flag(type);
+	return (count);
 }
 
 int ft_printf(const char *format, ...)
 {
 	va_list args;
 	int     count;
-    int     add_count;
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	count = 0;
 	while (*format)
 	{
 		if (*format == '%')
 		{
-			format++;
+            ++format;
 			if (*format)
-				add_count = print_variable(args, *format);
+				count += print_variable(args, *format);
+			else
+                count = -1;
 		}
 		else
-			add_count = write(1, format, 1);
-		++format;
-        if (add_count == -1)
-            count = -1;
-        if (count != -1)
-            count += add_count;
+            count += write(1, format, 1);
+        ++format;
 	}
 	va_end(args);
 	return (count);
