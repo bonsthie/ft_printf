@@ -41,7 +41,7 @@ int ft_printf(const char *format, ...)
 			if (*format)
 				count += print_variable(args, *format);
 			else
-                count = -1;
+               return (-1);
 		}
 		else
             count += write(1, format, 1);
