@@ -3,22 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
+/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:07:18 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/20 02:28:36 by bbonnet          ###   ########.fr       */
+/*   Updated: 2023/11/20 13:52:54 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int manage_flag(const char *flag, va_list args, int *len)
-{
-    (void)flag;
-    (void)len;
-    (void)args;
-    return (write(1, "%%", 2));
-}
 
 int display_char(const char *str)
 {
@@ -66,7 +58,6 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-    //int len = ft_printf(NULL, 1);
-    printf("%+.5d", 123);
-    printf("\n%.5d", -123);
+	//ft_printf("test\n%s\n%c", "oui", 'n');
+	//printf();
 }

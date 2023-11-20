@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
+/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:17:21 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/20 00:05:08 by bbonnet          ###   ########.fr       */
+/*   Updated: 2023/11/20 13:36:34 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,17 @@
 int ft_printf(const char *format, ...);
 
 
+int manage_flag(const char *flag, va_list args, int *count);
+int is_chars(const char c, const char *str);
+
+
 char	*ft_strchr(const char *str, int c);
 size_t	ft_strlen(const char *str);
+char	*ft_itoa(int nb);
+char	*ft_uitoa_base(int nb, char *base, int base_len);
+int	ft_putstr(char *str);
+int	ft_isdigit(int num);
+int ft_putchar(char c);
 
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
+/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 16:06:35 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/13 02:44:26 by bbonnet          ###   ########.fr       */
+/*   Updated: 2023/11/17 16:57:06 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define FT_PRINTF_H
 
 #include <stdarg.h>
-#include <stdio.h>
 #include <unistd.h>
 
 int ft_printf(const char *format, ...);

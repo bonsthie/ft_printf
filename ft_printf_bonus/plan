@@ -6,7 +6,7 @@
 '+' display a plus if the number is positif
 '-'number put space after 
 
-those flag can be display at the same time +, -, 0x, 0X
+those flag can't be display at the same time +, -, 0x, 0X
 
 if x or X you can't have + only #
 if i or or d you cant have # only +
