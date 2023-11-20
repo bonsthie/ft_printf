@@ -8,17 +8,18 @@ SRCS = ft_printf.c  \
 	   ft_putstr.c \
 	   ft_itoa.c \
 	   ft_isdigit.c \
-	   ft_putchar.c
+	   ft_putchar.c \
+	   putstr_len_fill.c 
 
 OBJS = $(SRCS:.c=.o)
 
 %.o: %.c 
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) -g $(CFLAGS) -c -o $@ $< 
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	gcc -o $(NAME) $(OBJS)
+	gcc -o $(NAME) $(OBJS) -g
 
 clean:
 	rm -f $(OBJS)

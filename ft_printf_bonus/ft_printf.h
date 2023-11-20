@@ -6,7 +6,7 @@
 /*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:17:21 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/20 13:36:34 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/20 21:58:28 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int ft_printf(const char *format, ...);
 
 int manage_flag(const char *flag, va_list args, int *count);
 int is_chars(const char c, const char *str);
+int putstr_len_fill_after(char *str, int len, char fill_char);
+int putstr_len_fill_before(char *str, int len, char fill_char);
 
 
 char	*ft_strchr(const char *str, int c);

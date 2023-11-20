@@ -6,7 +6,7 @@
 /*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:07:18 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/20 13:52:54 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:04:06 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-	//ft_printf("test\n%s\n%c", "oui", 'n');
+	ft_printf("%-54s%c", "oui", 'n');
 	//printf();
 }

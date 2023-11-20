@@ -6,11 +6,12 @@
 /*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:41:53 by babonnet          #+#    #+#             */
-/*   Updated: 2023/11/20 13:37:05 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/20 22:02:12 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
 int is_chars(const char c, const char *str)
 {
@@ -49,7 +50,17 @@ int manage_char(va_list args, const char *flag, const char *value_type)
 	if (*value_type == 'c')
 		len = ft_putchar(va_arg(args, int));
 	else if (*value_type == 's')
-		len = ft_putstr(va_arg(args, char *));
+	{
+		write(1, "rhaa", 4);
+		while(!is_chars(*value_type, " -") || value_type >= flag)	
+			value_type--;
+		if (*value_type == '-' )
+			len = putstr_len_fill_after(va_arg(args, char *), atoi(value_type + 1), ' '); /// atoi!!!!!
+		else if (*value_type == ' ')
+			len = putstr_len_fill_before(va_arg(args, char *), atoi(value_type + 1), ' ');
+		else
+			len = ft_putstr(va_arg(args, char *));
+	}
 	else
 		len = 0;
 	return (len);
