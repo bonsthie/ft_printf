@@ -1,0 +1,23 @@
+0'number complete a number with zero 
+'space' put space before
+'0' put space before conting what before like x0 +
+'.' put space before without counting what is before
+# display 0x 0X before hexa 
+'+' display a plus if the number is positif
+'-'number put space after 
+
+those flag can be display at the same time +, -, 0x, 0X
+
+if x or X you can't have + only #
+if i or or d you cant have # only +
+u or p or c cant have any of them 
+% can't have any flag at all
+
+
+go to the end of the flag keep the end of the flag in a pointer for later 
+itoa with the flag info 
+check the first flag # + if the type i compatible print the flag
+start a the end go back until that not number  check wich flag is it 
+atoi of the sting to now of how much 
+if that a after sting print the number and after the space if that a 0 put them  before 
+if that 0 or a - check if the signe have been writen to now how much to print  
