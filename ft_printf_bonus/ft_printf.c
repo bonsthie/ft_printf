@@ -6,7 +6,7 @@
 /*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:07:18 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/20 22:04:06 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/23 21:29:59 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,9 @@ int ft_printf(const char *format, ...)
 
 int main()
 {
-	ft_printf("%-54s%c", "oui", 'n');
-	//printf();
+	//ft_printf("%+ 23423472327834628427864d", 123);
+	ft_printf("% 5d\n", -123);
+	ft_printf("%.5d\n", -123);
+	ft_printf("%05d\n", -123);
+	ft_printf("% -5d\n", -123);
 }

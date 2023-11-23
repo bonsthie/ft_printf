@@ -6,7 +6,7 @@
 /*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:02:52 by babonnet          #+#    #+#             */
-/*   Updated: 2023/11/20 12:06:45 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:43:19 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	calcul_length(int nb)
 	return (count);
 }
 
-static int	calcul_length_base(unsigned int nb, int base)
+static int	calcul_length_base(unsigned long nb, int base)
 {
 	int	count;
 
@@ -72,7 +72,7 @@ char	*ft_itoa(int nb)
 	return (dest);
 }
 
-char	*ft_uitoa_base(int nb, char *base, int base_len)
+char	*ft_uitoa_base(unsigned long nb, char *base, int base_len)
 {
 	char	*dest;
 	int		dest_len;
