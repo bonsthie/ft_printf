@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
+/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:42:14 by babonnet          #+#    #+#             */
-/*   Updated: 2023/11/23 21:29:37 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/24 01:32:58 by bbonnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int print_sign(const char *start, const char *value_type, char *nb)
 				return (write(1, "0x", 2));
 			else if (*start == '#' && *value_type == 'X')
 				return (write(1, "0X", 2));
+            start++;
 		}
 	}
 	return (0);
@@ -67,7 +68,7 @@ int print_with_fill(const char *start, const char *end, char *nb, int print)
 
 	while (end >= start)
 	{
-		if (!ft_strchr(" .0-", *end))
+		if (ft_strchr(" .0-", *end))
 		{
 			size = chose_fill_setting(end, nb, print);
 			return (size);

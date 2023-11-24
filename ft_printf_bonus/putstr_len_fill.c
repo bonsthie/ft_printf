@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   putstr_len_fill.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
+/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 21:53:35 by babonnet          #+#    #+#             */
-/*   Updated: 2023/11/23 20:19:06 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/24 02:01:20 by bbonnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,11 @@ int putstr_len_fill_after_num(char *str, int len, char fill_char)
 	str_len = ft_putstr(str);
 	if (str_len <= len)
 	{
-		while(str_len++ <= len)
-			write(1, &fill_char, 1);
+		while(str_len < len)
+        {
+            write(1, &fill_char, 1);
+            str_len++;
+        }
 		return (len);
 	}
 	return (str_len);
