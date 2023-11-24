@@ -6,7 +6,7 @@
 /*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:17:21 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/23 21:08:06 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/24 21:53:33 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define BASE_16_UP "0123456789ABCDEF"
 # define BASE_10 "0123456789"
 
-int		ft_printf(const char *format, ...);
+int ft_printf(const char *format, ...);
 
 int		manage_flag(const char *flag, va_list args, int *count);
 int		is_chars(const char c, const char *str);

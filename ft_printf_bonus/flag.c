@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   flag.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
+/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 11:41:53 by babonnet          #+#    #+#             */
-/*   Updated: 2023/11/24 02:06:24 by bbonnet          ###   ########.fr       */
+/*   Updated: 2023/11/24 15:01:12 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ int	manage_char(va_list args, const char *flag, const char *value_type)
 		len = ft_putchar(va_arg(args, int));
 	else if (*value_type == 's')
 	{
-		while (!ft_strchr(" -.", *value_type) && value_type >= flag)
+		while (!ft_strchr("-.", *value_type) && value_type >= flag)
 			value_type--;
 		if (*value_type == '-')
-			len = putstr_len_fill_after_string(va_arg(args, char *),
+			len = putstr_len_fill_after_num(va_arg(args, char *),
                     ft_atoi(value_type + 1), ' ');
-		else if (*value_type == ' ')
+		else if (*value_type == '.')
 			len = putstr_len_fill_before_string(va_arg(args, char *),
 					ft_atoi(value_type + 1), ' ');
 		else

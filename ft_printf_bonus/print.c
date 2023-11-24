@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
+/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 17:42:14 by babonnet          #+#    #+#             */
-/*   Updated: 2023/11/24 01:32:58 by bbonnet          ###   ########.fr       */
+/*   Updated: 2023/11/24 16:02:22 by babonnet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	print_flag(const char *start, const char *end)
 
 int print_sign(const char *start, const char *value_type, char *nb)
 {
-	if (*value_type == 'i' || *value_type == 'd' || *value_type == 'u')
+	if (*value_type == 'i' || *value_type == 'd')
 	{
 		if (*nb == '-')
 			return (write(1, "-", 1));
 		while (*start < *value_type)
 		{
 			if (*start == '+')
-				return (write(1, "+", 1));
+				return (write(STDERR_FILENO, "+", 1));
 			start++;
 		}
 	}
@@ -68,7 +68,7 @@ int print_with_fill(const char *start, const char *end, char *nb, int print)
 
 	while (end >= start)
 	{
-		if (ft_strchr(" .0-", *end))
+		if (ft_strchr(" .0-", *end) && !ft_isdigit(*(end - 1)))
 		{
 			size = chose_fill_setting(end, nb, print);
 			return (size);

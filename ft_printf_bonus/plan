@@ -23,3 +23,9 @@ if that a after sting print the number and after the space if that a 0 put them 
 if that 0 or a - check if the signe have been writen to now how much to print  
 
 . dosent care 0 and space care
+
+
+i d :  '+' / '.' / '-' / '0' / ' ' / space dosent work withh '+'
+u   : !'+' / '.' / '-' / '0' / !' '/
+x X : !'+' / '.' / '-'/ '0' / !' ' /
+s   : !'+' / '.' / '-'/ !'0'/ !' ' /

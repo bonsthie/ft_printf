@@ -1,4 +1,4 @@
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Wextra -Werror
 NAME = ft_printf
 SRCS = ft_printf.c  \
