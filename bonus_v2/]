@@ -1,0 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/25 23:18:50 by bbonnet           #+#    #+#             */
+/*   Updated: 2023/11/25 23:48:34 by bbonnet          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+# include <stdarg.h>
+# include <unistd.h>
+
+# define BASE_16_LOW "0123456789abcdef"
+# define BASE_16_UP "0123456789ABCDEF"
+# define BASE_10 "0123456789"
+
+int ft_printf(const char *format, ...);
+
+
+int format_parsing(const char *format);
+
+#endif

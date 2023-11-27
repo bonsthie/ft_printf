@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: babonnet <babonnet@42angouleme.fr>         +#+  +:+       +#+        */
+/*   By: bbonnet <bbonnet@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 23:07:18 by bbonnet           #+#    #+#             */
-/*   Updated: 2023/11/24 21:53:49 by babonnet         ###   ########.fr       */
+/*   Updated: 2023/11/27 01:29:24 by bbonnet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,10 @@ int ft_printf(const char *format, ...)
 }
 
 int main() {
-    ft_printf("test + fsfs");     
+    int test;
+
+    test = -123;
+    printf("teist % 9.5d", test);     
     return 0;
 }
 

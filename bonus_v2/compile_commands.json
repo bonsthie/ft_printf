@@ -1,0 +1,21 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I",
+      "./include",
+      "-I",
+      "libft",
+      "-c",
+      "-o",
+      "obj/format_parser.o",
+      "src/format_parser.c"
+    ],
+    "directory": "/home/bonsthie/Documents/code/42/ft_printf/bonus_v2",
+    "file": "/home/bonsthie/Documents/code/42/ft_printf/bonus_v2/src/format_parser.c",
+    "output": "/home/bonsthie/Documents/code/42/ft_printf/bonus_v2/obj/format_parser.o"
+  }
+]
